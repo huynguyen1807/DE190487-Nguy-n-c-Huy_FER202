@@ -10,13 +10,12 @@ const companies = [
   { name: "Company Nine", category: "Retail", start: 1981, end: 1989 }
 ];
 
-// 1. Tạo company0New với start += 1 (không làm đổi companies[0])
+
 const company0New = { ...companies[0], start: companies[0].start + 1 };
 
 console.log("companies[0]:", companies[0]);
 console.log("company0New:", company0New);
 
-// 2. Hàm concatAll dùng rest parameter
-const concatAll = (...arrays) => arrays.flat();
 
+const concatAll = (...arrays) => arrays.flat();
 console.log(concatAll([1, 2], [3], [4, 5]));

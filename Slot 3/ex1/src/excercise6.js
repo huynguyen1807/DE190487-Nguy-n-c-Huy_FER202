@@ -13,8 +13,13 @@ const companies = [
 // Tạo bản sao và sort theo end tăng dần
 const sortedByEnd = [...companies].sort((a, b) => a.end - b.end);
 
+
 // Lấy 3 công ty đầu tiên
 const top3 = sortedByEnd.slice(0, 3);
 
 // In ra theo format "Company - EndYear"
 top3.forEach(c => console.log(`${c.name} - ${c.end}`));
+
+companies
+  .filter(c => c.category === "Technology")
+  .forEach(c => console.log(c));
