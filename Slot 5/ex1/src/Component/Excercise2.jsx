@@ -31,12 +31,15 @@ function Excercise2() {
         {id: 9, name: "Tuấn", age: 18, grade: 2},
         {id: 10, name: "Vinh", age: 19, grade: 1},
     ];
+
+    //In ra danh sách học sinh
+    console.log("Danh sách học sinh:", students);
+
     //In ra danh sách học sinh grade >= 7.5
     const aboveAverageStudents = students.filter(student => student.grade >= 7.5);
     console.log("Danh sách học sinh có điểm trên trung bình:", aboveAverageStudents);
 
-    //In ra dưới dạng bảng
-    console.table(students);
+    
 
     
   return (
@@ -58,10 +61,17 @@ function Excercise2() {
         ))}
       </ul>
 
-      <p>Danh sách học sinh có điểm trên trung bình:</p>
+      <p>Danh sách học sinh:</p>
+      <ul>
+        {students.map((student) => (
+            <li key={student.id}>Id: {student.id} - Name: {student.name} - Age: {student.age} - Grade: {student.grade}</li>
+        ))}
+      </ul> 
+
+      <p>Danh sách học sinh có điểm trên hoặc bằng 7.5:</p>
       <ul>
         {aboveAverageStudents.map((student) => (
-            <li key={student.id}>{student.name} - Grade: {student.grade}</li>
+            <li key={student.id}>Id: {student.id} - Name: {student.name} - Grade: {student.grade}</li>
         ))}
       </ul>
       <b> In ra danh sách students dưới dạng bảng  </b> 
