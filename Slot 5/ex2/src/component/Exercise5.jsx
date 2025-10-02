@@ -13,13 +13,13 @@ function Exercise5() {
 
 const teens = people.filter(person => person.age >= 13 && person.age <= 19)
 .map(p => `${p.name} (${p.age})`);
-
+teens.forEach(t => console.log(t));
     return (
         <div>
             <h1>Exercise 5</h1>
             <p>Danh sách tuổi từ 13 đến 19:</p>
             <ul>
-                {teens.map((people, i) => (<li key={i}>{people}</li>))}
+                {teens.map((t, i) => (<li key={i}>{t}</li>))}
             </ul>
         </div>
     );

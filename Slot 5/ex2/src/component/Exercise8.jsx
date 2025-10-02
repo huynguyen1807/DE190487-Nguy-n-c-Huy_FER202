@@ -1,6 +1,6 @@
 export function Exercise8() {
     const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
-    const avg = ages.reduce((a, b) => a + b, 0) / ages.length;
+
 const stats = ages.reduce((acc, age) => {
     acc.total += age;
     if (age < acc.min) acc.min = age;
@@ -14,20 +14,10 @@ const stats = ages.reduce((acc, age) => {
     return acc;
     }, { total: 0, min: Infinity, max: -Infinity, buckets: { teen: 0, adult: 0 } });
     //In Total, min, max, buckets{teen, adult}
-
-    const result = {
-        total: stats.total,
-        average: avg.toFixed(2),
-        min: stats.min,
-        max: stats.max,
-        buckets: stats.buckets
-    };
-    
     return (
         <div>
             <h1>Exercise 8</h1>
             <p>Total: {stats.total}</p>
-            <p>Avg: {avg}</p>
             <p>Min: {stats.min}</p>
             <p>Max: {stats.max}</p>
             <p>Teen: {stats.buckets.teen}</p>
