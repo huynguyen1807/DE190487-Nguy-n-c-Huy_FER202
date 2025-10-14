@@ -1,0 +1,33 @@
+.movie-card {
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.movie-card .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.movie-card .card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  flex-grow: 1;
+}
+
+.movie-card .btn-group {
+  margin-top: auto;
+}
