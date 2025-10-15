@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Form, Button, InputGroup, NavDropdown } from 'react-bootstrap';
 
-export default function NavBar() {
+export default function NavBar({ onPageChange, currentPage }) {
   const [quickSearch, setQuickSearch] = useState('');
 
   const handleQuickSearch = (e) => {
@@ -10,16 +10,44 @@ export default function NavBar() {
     console.log('Quick search:', quickSearch);
   };
 
+  const handlePageClick = (page) => {
+    onPageChange(page);
+  };
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="px-3">
-      <Navbar.Brand href="#home">🎬 Movie Manager</Navbar.Brand>
+      <Navbar.Brand 
+        href="#" 
+        onClick={(e) => { e.preventDefault(); handlePageClick('home'); }}
+        style={{ cursor: 'pointer' }}
+      >
+        🎬 Movie Manager
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         {/* Navigation Links */}
         <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
+          <Nav.Link 
+            href="#" 
+            onClick={(e) => { e.preventDefault(); handlePageClick('home'); }}
+            className={currentPage === 'home' ? 'active' : ''}
+          >
+            Home
+          </Nav.Link>
+          <Nav.Link 
+            href="#" 
+            onClick={(e) => { e.preventDefault(); handlePageClick('about'); }}
+            className={currentPage === 'about' ? 'active' : ''}
+          >
+            About
+          </Nav.Link>
+          <Nav.Link 
+            href="#" 
+            onClick={(e) => { e.preventDefault(); handlePageClick('contact'); }}
+            className={currentPage === 'contact' ? 'active' : ''}
+          >
+            Contact
+          </Nav.Link>
         </Nav>
 
         {/* Right side: Search Form and User Actions */}
@@ -47,24 +75,41 @@ export default function NavBar() {
               id="account-dropdown"
               align="end"
             >
-              <NavDropdown.Item href="#profile">
+              <NavDropdown.Item 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); alert('Manage Profiles feature coming soon!'); }}
+              >
                 Manage Your Profiles
               </NavDropdown.Item>
-              <NavDropdown.Item href="#build-account">
+              <NavDropdown.Item 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); handlePageClick('account'); }}
+              >
                 Build your Account
               </NavDropdown.Item>
-              <NavDropdown.Item href="#change-password">
+              <NavDropdown.Item 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); alert('Change Password feature coming soon!'); }}
+              >
                 Change Password
               </NavDropdown.Item>
             </NavDropdown>
 
             {/* Login Button */}
-            <Button variant="outline-light" size="sm">
+            <Button 
+              variant="outline-light" 
+              size="sm"
+              onClick={() => alert('Login feature coming soon!')}
+            >
               🔐 Login
             </Button>
 
             {/* Favourites */}
-            <Button variant="outline-warning" size="sm">
+            <Button 
+              variant="outline-warning" 
+              size="sm"
+              onClick={() => alert('Favourites feature coming soon!')}
+            >
               ⭐ Favourites
             </Button>
           </div>
