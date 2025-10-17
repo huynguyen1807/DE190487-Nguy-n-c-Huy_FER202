@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import MenuSection from "./Components/MenuSection";
 import BookingForm from "./Components/BookingForm";
-
+import Footer from "./Components/Footer";
 import { pizzas } from "./data/pizzas";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -15,7 +15,7 @@ function App() {
       <Hero />
       <MenuSection list={pizzas} />
       <BookingForm />
-     
+      <Footer />
     </>
   );
 }

@@ -26,8 +26,8 @@ export default function BookingForm() {
             <textarea className="form-control" rows="5" placeholder="Please write your comment"></textarea>
           </div>
 
-          <div className="col-12">
-            <button type="submit" className="btn btn-warning fw-semibold">
+          <div className="col-12 justify-content-center d-flex">
+            <button type="submit" className="btn btn-warning fw-semibold ">
               Send Message
             </button>
           </div>
