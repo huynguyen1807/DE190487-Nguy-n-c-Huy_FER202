@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "bookName": "Data Science Essentials",
+      "bookImage": "https://via.placeholder.com/150",
+      "bookReadingStatus": 2,
+      "isUnread": false,
+      "bookType": "Data Science"
+    },
+    {
+      "id": 2,
+      "bookName": "Security Fundamentals",
+      "bookImage": "https://via.placeholder.com/150",
+      "bookReadingStatus": 1,
+      "isUnread": true,
+      "bookType": "Security"
+    },
+    {
+      "id": 3,
+      "bookName": "Design Patterns in UI",
+      "bookImage": "https://via.placeholder.com/150",
+      "bookReadingStatus": 3,
+      "isUnread": false,
+      "bookType": "Design"
+    }
+  ]
+}

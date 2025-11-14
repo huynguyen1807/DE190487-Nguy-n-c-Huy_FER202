@@ -160,7 +160,7 @@ function RegisterForm() {
                     {errors.confirm}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex gap-2 justify-content-center">
                   <Button variant="primary" type="submit" disabled={!isValid}>
                     Submit
                   </Button>

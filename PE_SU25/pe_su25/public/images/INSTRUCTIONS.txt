@@ -1,0 +1,16 @@
+<!-- Placeholder for movie poster images -->
+
+<!-- Copy image files here from the given folder -->
+
+Image files needed:
+- 51v5ZpFyaFL._AC_SY445_.jpg (Inception)
+- OIP.jfif (Interstellar)
+- Parasite.webp (Parasite)
+- OIP (1).jfif (The Godfather)
+- R.jfif (The Dark Knight)
+- R (1).jfif (Spirited Away)
+
+If images folder is not available, you can:
+1. Search for the images folder in the given materials
+2. Or use placeholder images temporarily
+3. Or download movie posters from the internet with the correct filenames

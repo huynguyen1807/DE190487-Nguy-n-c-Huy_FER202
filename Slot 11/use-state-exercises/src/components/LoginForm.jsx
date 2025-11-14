@@ -27,6 +27,7 @@ const handleUsernameChange = (e) => {
         const { password, ...rest } = prev;
         return rest;
       });
+      
     }
   }
     const handleSubmit = (e) => {

@@ -5,7 +5,7 @@ import img2 from "../img/student3.png";
 import img3 from "../img/student4.png";
 
 
-const orange = "#F38F31"; // màu nền cam
+const orange = "#7d7874ff"; // màu nền cam
 const orangelight = "#EACDAD"; // màu nền cam nhạt
 export default function StudentsPage() {
   const students = [
